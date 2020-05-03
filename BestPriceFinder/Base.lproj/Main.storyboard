@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -52,12 +53,42 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="W8a-EG-0Kb"/>
                     <connections>
+                        <outlet property="ItemsTable" destination="IN1-mN-oQO" id="WRd-OT-114"/>
                         <outlet property="searchBar" destination="Bxf-e4-MWW" id="ndY-9U-WyD"/>
+                        <segue destination="Dq8-wA-wrk" kind="show" identifier="showDetail" id="Jub-Fd-4gm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woc-7h-BZw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1346.376811594203" y="120.53571428571428"/>
+        </scene>
+        <!--Product Details View Controller-->
+        <scene sceneID="h98-ks-eeC">
+            <objects>
+                <viewController id="Dq8-wA-wrk" customClass="ProductDetailsViewController" customModule="BestPriceFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VGd-7f-e8E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7l-yQ-azd">
+                                <rect key="frame" x="0.0" y="223" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Ofr-wd-qyz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oet-Rf-EbX"/>
+                    <connections>
+                        <outlet property="productTitle" destination="s7l-yQ-azd" id="VJh-bF-Qoy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Tn-PI-Xr9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-398.55072463768118" y="118.52678571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QiB-0u-htM">

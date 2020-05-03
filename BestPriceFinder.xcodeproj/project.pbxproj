@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4F126B245F18920031E03A /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F126A245F18920031E03A /* ProductDetailsViewController.swift */; };
 		4EA8760724548E12001F92C0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8760624548E12001F92C0 /* Product.swift */; };
 		4EA8760D2454933B001F92C0 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8760C2454933B001F92C0 /* ProductsTableViewController.swift */; };
 		4EB698D02450FF690028EE4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB698CF2450FF690028EE4B /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E4F126A245F18920031E03A /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		4EA8760624548E12001F92C0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4EA8760C2454933B001F92C0 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		4EB698CC2450FF690028EE4B /* BestPriceFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestPriceFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,7 @@
 			children = (
 				4EB698CF2450FF690028EE4B /* AppDelegate.swift */,
 				4EA8760C2454933B001F92C0 /* ProductsTableViewController.swift */,
+				4E4F126A245F18920031E03A /* ProductDetailsViewController.swift */,
 				4EB698D12450FF690028EE4B /* SceneDelegate.swift */,
 				4EA8760624548E12001F92C0 /* Product.swift */,
 				4EB698D52450FF690028EE4B /* Main.storyboard */,
@@ -144,6 +147,7 @@
 				4EA8760724548E12001F92C0 /* Product.swift in Sources */,
 				4EA8760D2454933B001F92C0 /* ProductsTableViewController.swift in Sources */,
 				4EB698D02450FF690028EE4B /* AppDelegate.swift in Sources */,
+				4E4F126B245F18920031E03A /* ProductDetailsViewController.swift in Sources */,
 				4EB698D22450FF690028EE4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

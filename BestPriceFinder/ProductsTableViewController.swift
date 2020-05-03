@@ -6,7 +6,8 @@
 //  Copyright © 2020 Matteo Fusilli. All rights reserved.
 //
 // TODO:
-// - Open new activity when clicking on Item object
+// - Improve table view
+// - Improve detailView
 // - Logo for iOS App
 // - Add Amazon API
 //
@@ -18,6 +19,7 @@ class ProductsTableViewController: UITableViewController, UISearchBarDelegate{
     var itemsData = [Item]()
     
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet var ItemsTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +67,16 @@ class ProductsTableViewController: UITableViewController, UISearchBarDelegate{
         // cell.detailTextLabel?.text = "subtitle here"
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ProductDetailsViewController {
+            destination.product = itemsData[ItemsTable.indexPathForSelectedRow!.row]
+        }
     }
 
 }
