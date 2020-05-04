@@ -6,7 +6,7 @@
 //  Copyright © 2020 Matteo Fusilli. All rights reserved.
 //
 // TODO:
-// - Improve table view
+// - Display image in cell, change style for labels
 // - Improve detailView
 // - Logo for iOS App
 // - Add Amazon API
@@ -50,21 +50,24 @@ class ProductsTableViewController: UITableViewController, UISearchBarDelegate{
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let date = Calendar.current.date(byAdding: .day, value: section, to: Date())
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM dd, yyyy"
-        
-        return dateFormatter.string(from: date!)
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
-        
+        // let cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! ItemTableViewCell
+
         let itemObject = itemsData[indexPath.section]
-                
-        cell.textLabel?.text = itemObject.title[0]
-        // cell.detailTextLabel?.text = "subtitle here"
+        
+        let url = URL(string: itemObject.galleryURL[0])
+
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            DispatchQueue.main.async {
+                cell.imageCell.image = UIImage(data: data!)
+            }
+        }
+        
+        
+        cell.titleCell?.text = itemObject.title[0]
+        cell.subtitleCell?.text = "£ \(itemObject.sellingStatus[0].currentPrice[0].__value__)" 
         
         return cell
     }
