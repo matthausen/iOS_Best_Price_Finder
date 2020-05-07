@@ -57,9 +57,7 @@ struct EBayResponse: Codable {
                 let newJSONDecoder = JSONDecoder()
                 let itemObject = try newJSONDecoder.decode(EBayResponse.self, from: data)
                 let item = itemObject.findItemsByKeywordsResponse[0].searchResult[0].item
-                // print("Respose: " ,item)
                 for i in item {
-                    // print(i)
                     itemsArray.append(i)
                 }
             } catch {

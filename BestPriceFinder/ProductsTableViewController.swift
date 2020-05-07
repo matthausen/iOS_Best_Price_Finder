@@ -5,12 +5,6 @@
 //  Created by Matteo Fusilli on 25/04/2020.
 //  Copyright © 2020 Matteo Fusilli. All rights reserved.
 //
-// TODO:
-// - Display image in cell, change style for labels
-// - Improve detailView
-// - Logo for iOS App
-// - Add Amazon API
-//
 
 import UIKit
 
@@ -59,7 +53,7 @@ class ProductsTableViewController: UITableViewController, UISearchBarDelegate{
         let url = URL(string: itemObject.galleryURL[0])
 
         DispatchQueue.global().async {
-            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            let data = try? Data(contentsOf: url!)
             DispatchQueue.main.async {
                 cell.imageCell.image = UIImage(data: data!)
             }
@@ -67,7 +61,7 @@ class ProductsTableViewController: UITableViewController, UISearchBarDelegate{
         
         
         cell.titleCell?.text = itemObject.title[0]
-        cell.subtitleCell?.text = "£ \(itemObject.sellingStatus[0].currentPrice[0].__value__)" 
+        cell.subtitleCell?.text = "GBP \(itemObject.sellingStatus[0].currentPrice[0].__value__)" 
         
         return cell
     }

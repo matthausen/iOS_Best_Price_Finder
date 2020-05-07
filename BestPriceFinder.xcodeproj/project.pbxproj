@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E4F126B245F18920031E03A /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F126A245F18920031E03A /* ProductDetailsViewController.swift */; };
 		4E71753B2460A71900573DEB /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71753A2460A71900573DEB /* ItemTableViewCell.swift */; };
+		4E81277624649FDA00568E3E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4E81277524649FDA00568E3E /* README.md */; };
 		4EA8760724548E12001F92C0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8760624548E12001F92C0 /* Product.swift */; };
 		4EA8760D2454933B001F92C0 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA8760C2454933B001F92C0 /* ProductsTableViewController.swift */; };
 		4EB698D02450FF690028EE4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB698CF2450FF690028EE4B /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		4E4F126A245F18920031E03A /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		4E71753A2460A71900573DEB /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		4E81277524649FDA00568E3E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4EA8760624548E12001F92C0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4EA8760C2454933B001F92C0 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		4EB698CC2450FF690028EE4B /* BestPriceFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestPriceFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +50,7 @@
 			children = (
 				4EB698CE2450FF690028EE4B /* BestPriceFinder */,
 				4EB698CD2450FF690028EE4B /* Products */,
+				4E81277524649FDA00568E3E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +139,7 @@
 			files = (
 				4EB698DC2450FF6C0028EE4B /* LaunchScreen.storyboard in Resources */,
 				4EB698D92450FF6C0028EE4B /* Assets.xcassets in Resources */,
+				4E81277624649FDA00568E3E /* README.md in Resources */,
 				4EB698D72450FF690028EE4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
